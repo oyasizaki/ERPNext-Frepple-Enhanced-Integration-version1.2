@@ -1,0 +1,14 @@
+PS C:\Users\Home> docker run -e POSTGRES_HOST=host.docker.internal -e POSTGRES_PORT=5432 -e POSTGRES_USER=frepple -e POSTGRES_PASSWORD=frepple -e POSTGRES_DBNAME=freppledb --name frepple-community-local --publish 9000:80 --detach ghcr.io/frepple/frepple-community:latest         //frepple insatll
+Unable to find image 'ghcr.io/frepple/frepple-community:latest' locally
+latest: Pulling from frepple/frepple-community
+7a2c55901189: Pull complete
+a05de835a2fa: Pull complete
+78160e0594ec: Pull complete
+d06c79e89edd: Pull complete
+06276d287ea3: Pull complete
+Digest: sha256:f83e0c76e571aab77167f5a939cd5f19c76caf223c11f2546bcdf8eb880e2206
+Status: Downloaded newer image for ghcr.io/frepple/frepple-community:latest
+d1d0d942ab964e44ced6b0b2a14c75afadd522e23b67379b6ef0ed17d017dedc
+PS C:\Users\Home> docker run --name postgres-container -e POSTGRES_USER=frepple -e POSTGRES_PASSWORD=frepple -e POSTGRES_DB=freppledb -p 5432:5432 -d postgres                                                                      //database install 
+1c994cfbf86aec8055763dc3a3c976af9edbec277c5b28402bd0239ecabc4782
+PS C:\Users\Home>
